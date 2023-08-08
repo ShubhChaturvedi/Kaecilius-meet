@@ -1,13 +1,17 @@
 
 import './App.css';
-import Navbar from './Components/Navbar';
+import {Routes, Route} from "react-router-dom"
 import Home from './Components/Home';
+import Room from './Components/Room';
+
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <Home/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/room/:roomId" element={<Room/>}/>
+    </Routes>
     </>
   );
 }
